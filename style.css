@@ -17,7 +17,7 @@
   width: 50px;
   position: absolute;
   bottom: 0;
-  left: 50px;
+  left: 100px;
   /* animation: seBaisser 700ms infinite; */
 }
 
@@ -42,11 +42,7 @@
   bottom: 0;
   left: 950px;
   /* animation: obstacle 2s infinite linear; */
-  /* visibility: hidden; */
-}
-
-.animationObstacle {
-  animation: obstacle 2s linear;
+  visibility: hidden;  
 }
 
 .obstacle2 {
@@ -57,7 +53,24 @@
   bottom: 75px;
   left: 950px;
   /* animation: obstacle 2s infinite linear; */
-  /* visibility: hidden; */
+  visibility: hidden;
+}
+
+.obstacle3 {
+  width: 20px;
+  height: 120px;
+  background-color: blueviolet;
+  position: absolute;
+  bottom: 0px;
+  left: 950px;
+  /* animation: obstacle 2s infinite linear; */
+  visibility: hidden;
+}
+
+/* Animation de déplacement d'un obstacle */
+.animationObstacle {
+  animation: obstacle 2s linear;
+  visibility: visible;
 }
 
 /* Animation de mon premier obstacle */
@@ -67,7 +80,7 @@
   }
 
   100% {
-    left: -50px;
+    left: 0px;
   }
 }
 

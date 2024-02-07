@@ -9,7 +9,6 @@ let obstacle = document.querySelector(".obstacle");
 // boutonSaut.addEventListener("click", sauter());
 // boutonSeBaisser.addEventListener("click", seBaisser());
 
-
 // Fonction pour faire sauter le personnage
 function sauter() {
   if (perso.classList != "sauter" && perso.classList != "seBaisser") {
@@ -32,8 +31,7 @@ function seBaisser() {
   }
 }
 
-
-let tousLesObstacles = [".obstacle", ".obstacle2"];
+let tousLesObstacles = [".obstacle", ".obstacle2", ".obstacle3"];
 
 // Retourne un chiffre aléatoire entre 0 et la taille du tableau
 function getRandomNumber(tableau) {
@@ -45,19 +43,17 @@ function getRandomObstacle() {
   return tousLesObstacles[getRandomNumber(tousLesObstacles.length)];
 }
 
-
 // Fonction pour faire bouger un obstacle toutes les 2,1 secondes
 function obstacleBouge() {
   let obstacleAleatoire = getRandomObstacle();
   let obstacleChoisi = document.querySelector(obstacleAleatoire);
   obstacleChoisi.classList.add("animationObstacle");
 
-  setTimeout(function() {
+  setTimeout(function () {
     obstacleChoisi.classList.remove("animationObstacle");
   }, 2000);
 
-  setTimeout(obstacleBouge,2100);
+  setTimeout(obstacleBouge, 2100);
 }
 
 obstacleBouge();
-
