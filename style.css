@@ -3,12 +3,26 @@
   margin: 0;
 }
 
+body {
+  background-color: rgb(80, 80, 80);
+}
+
 .jeu {
   margin: auto;
   border: solid 1px black;
-  width: 1000px;
-  height: 500px;
+  width: 700px;
+  height: 400px;
   position: relative;
+  background-image: url(../images/imageBackground.jpg);
+  background-repeat: repeat-x;
+  background-size: cover;
+  /* animation: defile 500s infinite linear; */
+}
+
+/* Animation pour faire bouger l'image de fond */
+@keyframes defile {
+  from {background-position: 0px 0px;}
+  to {background-position: -10000px 0px;}
 }
 
 .perso {
@@ -16,7 +30,7 @@
   height: 100px;
   width: 50px;
   position: absolute;
-  bottom: 0;
+  bottom: 95px;
   left: 100px;
   /* animation: seBaisser 700ms infinite; */
 }
@@ -39,8 +53,19 @@
   height: 50px;
   background-color: red;
   position: absolute;
-  bottom: 0;
-  left: 950px;
+  bottom: 95px;
+  left:650px;
+  /* animation: obstacle 2s infinite linear; */
+  visibility: hidden;
+}
+
+.obstacle4 {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  bottom: 95px;
+  left: 650px;
   /* animation: obstacle 2s infinite linear; */
   visibility: hidden;  
 }
@@ -50,8 +75,19 @@
   height: 50px;
   background-color: greenyellow;
   position: absolute;
-  bottom: 75px;
-  left: 950px;
+  bottom: 170px;
+  left: 650px;
+  /* animation: obstacle 2s infinite linear; */
+  visibility: hidden;
+}
+
+.obstacle5 {
+  width: 50px;
+  height: 50px;
+  background-color: greenyellow;
+  position: absolute;
+  bottom: 170px;
+  left: 650px;
   /* animation: obstacle 2s infinite linear; */
   visibility: hidden;
 }
@@ -61,8 +97,19 @@
   height: 120px;
   background-color: blueviolet;
   position: absolute;
-  bottom: 0px;
-  left: 950px;
+  bottom: 95px;
+  left: 650px;
+  /* animation: obstacle 2s infinite linear; */
+  visibility: hidden;
+}
+
+.obstacle6 {
+  width: 20px;
+  height: 120px;
+  background-color: blueviolet;
+  position: absolute;
+  bottom: 95px;
+  left: 650px;
   /* animation: obstacle 2s infinite linear; */
   visibility: hidden;
 }
@@ -76,7 +123,7 @@
 /* Animation de mon premier obstacle */
 @keyframes obstacle {
   0% {
-    left: 950px;
+    left: 650px;
   }
 
   100% {
@@ -87,16 +134,16 @@
 /* Animation de saut du perso */
 @keyframes saut {
   0% {
-    bottom: 0px;
+    bottom: 95px;
   }
   30% {
-    bottom: 80px;
+    bottom: 175px;
   }
   60% {
-    bottom: 80px;
+    bottom: 175px;
   }
   100% {
-    bottom: 0px;
+    bottom: 95px;
   }
 }
 

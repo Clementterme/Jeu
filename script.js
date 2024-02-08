@@ -32,15 +32,21 @@ function seBaisser() {
 }
 
 let tousLesObstacles = [".obstacle", ".obstacle2", ".obstacle3"];
+let tousLesObstacles2 = [".obstacle4", ".obstacle5", ".obstacle6"];
 
 // Retourne un chiffre aléatoire entre 0 et la taille du tableau
 function getRandomNumber(tableau) {
   return Math.floor(Math.random() * tableau);
 }
 
-// Retourne un des obstacles
+// Retourne un des obstacles du premier tableau
 function getRandomObstacle() {
   return tousLesObstacles[getRandomNumber(tousLesObstacles.length)];
+}
+
+// Retourne un des obstacles du deuxième tableau
+function getRandomObstacle2() {
+  return tousLesObstacles2[getRandomNumber(tousLesObstacles2.length)];
 }
 
 // Fonction pour faire bouger un obstacle toutes les 2,1 secondes
@@ -56,4 +62,17 @@ function obstacleBouge() {
   setTimeout(obstacleBouge, 2100);
 }
 
-obstacleBouge();
+// setTimeout(function obstacleBouge2() {
+//   let obstacleAleatoire = getRandomObstacle2();
+//   let obstacleChoisi = document.querySelector(obstacleAleatoire);
+//   obstacleChoisi.classList.add("animationObstacle");
+
+//   setTimeout(function () {
+//     obstacleChoisi.classList.remove("animationObstacle");
+//   }, 2000);
+
+//   setTimeout(obstacleBouge2, 2100);
+// }, 1000);
+
+// obstacleBouge();
+
