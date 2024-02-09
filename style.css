@@ -13,7 +13,7 @@ body {
   width: 700px;
   height: 400px;
   position: relative;
-  background-image: url(../images/imageBackground.jpg);
+  background-image: url(./images/imageBackground.jpg);
   background-repeat: repeat-x;
   background-size: cover;
   /* animation: defile 500s infinite linear; */
