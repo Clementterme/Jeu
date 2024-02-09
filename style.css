@@ -5,6 +5,9 @@
 
 body {
   background-color: rgb(80, 80, 80);
+  background-image: url(./images/backgroundSite2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .jeu {

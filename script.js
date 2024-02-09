@@ -1,5 +1,24 @@
 let perso = document.querySelector(".perso");
 let obstacle = document.querySelector(".obstacle");
+const persoRect = document.querySelector(".perso").getBoundingClientRect();
+const obstacleRect = document.querySelector(".obstacle").getBoundingClientRect();
+
+
+// Essai des collisions
+// function updatePositions() {
+//   console.log(persoRect);
+//   console.log(obstacleRect);
+//   if (
+//     persoRect.right >= obstacleRect.left &&
+//     persoRect.bottom <= obstacleRect.top
+//   ) {
+//     alert(Perdu);
+//   }
+
+//   setInterval(updatePositions, 10);
+// }
+// updatePositions();
+
 
 // Rajoute un addEventListener sur les boutons mais ne marche pas donc j'ai fait un onclick dans le HTML
 
@@ -75,4 +94,3 @@ function obstacleBouge() {
 // }, 1000);
 
 // obstacleBouge();
-
