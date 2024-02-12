@@ -31,11 +31,34 @@ body {
 .perso {
   /* background-color: blue; */
   height: 100px;
-  width: 50px;
+  width: 41px;
   position: absolute;
   bottom: 95px;
   left: 100px;
   /* animation: seBaisser 700ms infinite; */
+  background-image: url(./images/gojoMove1.png); 
+  /* background-size: cover;   */
+  background-repeat: no-repeat;
+  animation: marcheParDefaut 1s infinite;
+  /* animation: kick 700ms infinite; */
+}
+
+@keyframes marcheParDefaut {
+  0% {
+    background-image: url(./images/gojoMove1.png);
+  }
+  25% {
+    background-image: url(./images/gojoMove2.png);
+    width: 34px;
+  }
+  50% {
+    background-image: url(./images/gojoMove3.png);
+    width: 43px;
+  }
+  75% {
+    background-image: url(./images/gojoMove4.png);
+    width: 42px;
+  }
 }
 
 .sauter {
@@ -46,9 +69,40 @@ body {
   animation: seBaisser 700ms;
 }
 
-.personnage {
+/* .personnage {
+  background: url(./images/gojoMove1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 100%;
+  animation: kick 2s infinite;
+} */
+
+@keyframes kick {
+  0% {
+    background-image: url(./images/gojoKick1.png);
+    width: 52px;
+  }
+  20% {
+    background-image: url(./images/gojoKick2.png);
+    width: 71px;
+  }
+  30% {
+    background-image: url(./images/gojoKick3.png);
+    width: 84px;
+  }
+  50% {
+    background-image: url(./images/gojoKick4.png);
+    width: 93px;
+  }
+  70% {
+    background-image: url(./images/gojoKick5.png);
+    width: 85px;
+  }
+  90% {
+    background-image: url(./images/gojoKick6.png);
+    width: 55px;
+  }
 }
 
 .obstacle {
@@ -138,12 +192,30 @@ body {
 @keyframes saut {
   0% {
     bottom: 95px;
+    background-image: url(./images/gojoJump1.png);
+    width: 48px;
+    height: 75px;
+  }
+  10% {
+    background-image: url(./images/gojoJump2.png);
+    height: 90px;
+    width: 53px;
   }
   30% {
     bottom: 175px;
+    background-image: url(./images/gojoJump3.png);
+    width: 45px;
   }
   60% {
     bottom: 175px;
+    background-image: url(./images/gojoJump3.png);
+    width: 45px;
+  }
+  80% {
+    background-image: url(./images/gojoJump2.png);
+    height: 90px;
+    width: 53px;
+    bottom: 95px;
   }
   100% {
     bottom: 95px;
@@ -153,17 +225,33 @@ body {
 /* Animation de se baisser du perso */
 @keyframes seBaisser {
   0% {
-    /* height: 100px; */
+    background-image: url(./images/gojoJump2.png);
+    width: 53px;
+    height: 90px;
+  }
+  15% {
+    background-image: url(./images/gojoJump1.png);
+    width: 48px;
+    height: 75px;
   }
   30% {
     height: 50px;
-    /* top : 450px; */
+    width: 44px;
+    background-image: url(./images/gojoBaisse.png);
   }
   60% {
     height: 50px;
-    /* top : 450px; */
+    width: 44px;
+    background-image: url(./images/gojoBaisse.png);
+  }
+  80% {
+    background-image: url(./images/gojoJump1.png);
+    width: 48px;
+    height: 75px;
   }
   100% {
-    /* height: 100px; */
+    background-image: url(./images/gojoJump2.png);
+    width: 53px;
+    height: 90px;
   }
 }
