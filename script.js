@@ -22,7 +22,7 @@ document.addEventListener("keydown", function (event) {
   if (event.code === "ArrowRight") {
     kick();
   }
-}); 
+});
 
 // Fonction pour faire sauter le personnage
 function sauter() {
@@ -100,53 +100,72 @@ function obstacleBouge() {
   setTimeout(obstacleBouge, 2100);
 }
 
-setTimeout(function obstacleBouge2() {
-  let obstacleAleatoire = getRandomObstacle2();
-  let obstacleChoisi = document.querySelector(obstacleAleatoire);
-  obstacleChoisi.classList.add("animationObstacle");
+// setTimeout(function obstacleBouge2() {
+//   let obstacleAleatoire = getRandomObstacle2();
+//   let obstacleChoisi = document.querySelector(obstacleAleatoire);
+//   obstacleChoisi.classList.add("animationObstacle");
 
-  setTimeout(function () {
-    obstacleChoisi.classList.remove("animationObstacle");
-  }, 2000);
+//   setTimeout(function () {
+//     obstacleChoisi.classList.remove("animationObstacle");
+//   }, 2000);
 
-  setTimeout(obstacleBouge2, 2100);
-}, 1000);
+//   setTimeout(obstacleBouge2, 2100);
+// }, 1000);
 
-obstacleBouge();
+// obstacleBouge();
 
-let collision = setInterval(function () {
-  let gojoBottom = parseInt(window.getComputedStyle(perso).getPropertyValue("bottom"));
-  let gojoTop = parseInt(window.getComputedStyle(perso).getPropertyValue("top"));
-  let gojoWidth = parseInt(window.getComputedStyle(perso).getPropertyValue("width"));
-  let obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
-  let obstacleLeft2 = parseInt(window.getComputedStyle(obstacle2).getPropertyValue("left"));
-  let obstacleLeft3 = parseInt(window.getComputedStyle(obstacle3).getPropertyValue("left"));
-  let obstacleLeft4 = parseInt(window.getComputedStyle(obstacle4).getPropertyValue("left"));
-  let obstacleLeft5 = parseInt(window.getComputedStyle(obstacle5).getPropertyValue("left"));
-  let obstacleLeft6 = parseInt(window.getComputedStyle(obstacle6).getPropertyValue("left"));
+// Collisions
+// let collision = setInterval(function () {
+//   let gojoBottom = parseInt(
+//     window.getComputedStyle(perso).getPropertyValue("bottom")
+//   );
+//   let gojoTop = parseInt(
+//     window.getComputedStyle(perso).getPropertyValue("top")
+//   );
+//   let gojoWidth = parseInt(
+//     window.getComputedStyle(perso).getPropertyValue("width")
+//   );
+//   let obstacleLeft = parseInt(
+//     window.getComputedStyle(obstacle).getPropertyValue("left")
+//   );
+//   let obstacleLeft2 = parseInt(
+//     window.getComputedStyle(obstacle2).getPropertyValue("left")
+//   );
+//   let obstacleLeft3 = parseInt(
+//     window.getComputedStyle(obstacle3).getPropertyValue("left")
+//   );
+//   let obstacleLeft4 = parseInt(
+//     window.getComputedStyle(obstacle4).getPropertyValue("left")
+//   );
+//   let obstacleLeft5 = parseInt(
+//     window.getComputedStyle(obstacle5).getPropertyValue("left")
+//   );
+//   let obstacleLeft6 = parseInt(
+//     window.getComputedStyle(obstacle6).getPropertyValue("left")
+//   );
 
-  if (obstacleLeft <= 136 && obstacleLeft >= 55 && gojoBottom <= 145) {
-    alert("Perdu");
-  }
-  if (obstacleLeft4 <= 136 && obstacleLeft4 >= 55 && gojoBottom <= 145) {
-    alert("Perdu");
-  }
-  if (obstacleLeft2 <= 136 && obstacleLeft2 >= 55 && gojoTop <= 230) {
-    alert("Perdu");
-  }
-  if (obstacleLeft5 <= 136 && obstacleLeft5 >= 55 && gojoTop <= 230) {
-    alert("Perdu");
-  }
-  if (obstacleLeft3 <= 136 && obstacleLeft3 >= 55 && gojoWidth >= 54) {
-    obstacle3.classList.remove("animationObstacle");
-  }
-  if (obstacleLeft3 <= 136 && obstacleLeft3 >= 55 && gojoWidth < 54) {
-    alert("Perdu");
-  }
-  if (obstacleLeft6 <= 136 && obstacleLeft6 >= 55 && gojoWidth >= 54) {
-    obstacle6.classList.remove("animationObstacle");
-  }
-  if (obstacleLeft6 <= 136 && obstacleLeft6 >= 55 && gojoWidth < 54) {
-    alert("Perdu");
-  }
-}, 1);
+//   if (obstacleLeft <= 136 && obstacleLeft >= 55 && gojoBottom <= 145) {
+//     alert("Perdu");
+//   }
+//   if (obstacleLeft4 <= 136 && obstacleLeft4 >= 55 && gojoBottom <= 145) {
+//     alert("Perdu");
+//   }
+//   if (obstacleLeft2 <= 136 && obstacleLeft2 >= 55 && gojoTop <= 230) {
+//     alert("Perdu");
+//   }
+//   if (obstacleLeft5 <= 136 && obstacleLeft5 >= 55 && gojoTop <= 230) {
+//     alert("Perdu");
+//   }
+//   if (obstacleLeft3 <= 136 && obstacleLeft3 >= 55 && gojoWidth >= 54) {
+//     obstacle3.classList.remove("animationObstacle");
+//   }
+//   if (obstacleLeft3 <= 136 && obstacleLeft3 >= 55 && gojoWidth < 54) {
+//     alert("Perdu");
+//   }
+//   if (obstacleLeft6 <= 136 && obstacleLeft6 >= 55 && gojoWidth >= 54) {
+//     obstacle6.classList.remove("animationObstacle");
+//   }
+//   if (obstacleLeft6 <= 136 && obstacleLeft6 >= 55 && gojoWidth < 54) {
+//     alert("Perdu");
+//   }
+// }, 1);

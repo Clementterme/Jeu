@@ -12,7 +12,8 @@ body {
 
 .jeu {
   margin: auto;
-  border: solid 1px black;
+  border: solid 3px rgb(52, 18, 125);
+  border-radius: 10px;
   width: 700px;
   height: 400px;
   position: relative;
@@ -24,23 +25,23 @@ body {
 
 /* Animation pour faire bouger l'image de fond */
 @keyframes defile {
-  from {background-position: 0px 0px;}
-  to {background-position: -10000px 0px;}
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: -10000px 0px;
+  }
 }
 
 .perso {
-  /* background-color: blue; */
   height: 100px;
   width: 41px;
   position: absolute;
   bottom: 95px;
   left: 100px;
-  /* animation: seBaisser 700ms infinite; */
-  background-image: url(./images/gojoMove1.png); 
-  /* background-size: cover;   */
+  background-image: url(./images/gojoMove1.png);
   background-repeat: no-repeat;
   animation: marcheParDefaut 1s infinite;
-  /* animation: kick 700ms infinite; */
 }
 
 @keyframes marcheParDefaut {
@@ -72,14 +73,6 @@ body {
 .kick {
   animation: kick 700ms;
 }
-/* .personnage {
-  background: url(./images/gojoMove1.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  animation: kick 2s infinite;
-} */
 
 @keyframes kick {
   0% {
@@ -114,8 +107,7 @@ body {
   background-color: red;
   position: absolute;
   bottom: 95px;
-  left:650px;
-  /* animation: obstacle 2s infinite linear; */
+  left: 650px;
   visibility: hidden;
 }
 
@@ -126,8 +118,7 @@ body {
   position: absolute;
   bottom: 95px;
   left: 650px;
-  /* animation: obstacle 2s infinite linear; */
-  visibility: hidden;  
+  visibility: hidden;
 }
 
 .obstacle2 {
@@ -137,7 +128,6 @@ body {
   position: absolute;
   bottom: 170px;
   left: 650px;
-  /* animation: obstacle 2s infinite linear; */
   visibility: hidden;
 }
 
@@ -148,19 +138,46 @@ body {
   position: absolute;
   bottom: 170px;
   left: 650px;
-  /* animation: obstacle 2s infinite linear; */
   visibility: hidden;
 }
 
 .obstacle3 {
-  width: 50px;
+  width: 54px;
   height: 100px;
-  background-color: blueviolet;
   position: absolute;
   bottom: 95px;
   left: 650px;
-  /* animation: obstacle 2s infinite linear; */
   visibility: hidden;
+  background-image: url(./images/aowMove1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: obstacle3 1s infinite;
+}
+
+@keyframes obstacle3 {
+  0% {
+    background-image: url(./images/aowMove1.png);
+  }
+  17% {
+    background-image: url(./images/aowMove2.png);
+    width: 67px;
+  }
+  34% {
+    background-image: url(./images/aowMove3.png);
+    width: 69px;
+  }
+  50% {
+    background-image: url(./images/aowMove4.png);
+    width: 77px;
+  }
+  67% {
+    background-image: url(./images/aowMove3.png);
+    width: 69px;
+  }
+  84% {
+    background-image: url(./images/aowMove2.png);
+    width: 67px;
+  }
 }
 
 .obstacle6 {
@@ -170,7 +187,6 @@ body {
   position: absolute;
   bottom: 95px;
   left: 650px;
-  /* animation: obstacle 2s infinite linear; */
   visibility: hidden;
 }
 
