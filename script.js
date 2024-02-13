@@ -125,28 +125,28 @@ let collision = setInterval(function () {
   let obstacleLeft5 = parseInt(window.getComputedStyle(obstacle5).getPropertyValue("left"));
   let obstacleLeft6 = parseInt(window.getComputedStyle(obstacle6).getPropertyValue("left"));
 
-  if (obstacleLeft <= 141 && obstacleLeft >= 50 && gojoBottom <= 145) {
+  if (obstacleLeft <= 136 && obstacleLeft >= 55 && gojoBottom <= 145) {
     alert("Perdu");
   }
-  if (obstacleLeft4 <= 141 && obstacleLeft4 >= 50 && gojoBottom <= 145) {
+  if (obstacleLeft4 <= 136 && obstacleLeft4 >= 55 && gojoBottom <= 145) {
     alert("Perdu");
   }
-  if (obstacleLeft2 <= 141 && obstacleLeft2 >= 50 && gojoTop <= 230) {
+  if (obstacleLeft2 <= 136 && obstacleLeft2 >= 55 && gojoTop <= 230) {
     alert("Perdu");
   }
-  if (obstacleLeft5 <= 141 && obstacleLeft5 >= 50 && gojoTop <= 230) {
+  if (obstacleLeft5 <= 136 && obstacleLeft5 >= 55 && gojoTop <= 230) {
     alert("Perdu");
   }
-  if (obstacleLeft3 <= 141 && obstacleLeft3 >= 50 && gojoWidth >= 54) {
+  if (obstacleLeft3 <= 136 && obstacleLeft3 >= 55 && gojoWidth >= 54) {
     obstacle3.classList.remove("animationObstacle");
   }
-  if (obstacleLeft3 <= 141 && obstacleLeft3 >= 50 && gojoWidth < 54) {
+  if (obstacleLeft3 <= 136 && obstacleLeft3 >= 55 && gojoWidth < 54) {
     alert("Perdu");
   }
-  if (obstacleLeft6 <= 141 && obstacleLeft6 >= 50 && gojoWidth >= 54) {
+  if (obstacleLeft6 <= 136 && obstacleLeft6 >= 55 && gojoWidth >= 54) {
     obstacle6.classList.remove("animationObstacle");
   }
-  if (obstacleLeft6 <= 141 && obstacleLeft6 >= 50 && gojoWidth < 54) {
+  if (obstacleLeft6 <= 136 && obstacleLeft6 >= 55 && gojoWidth < 54) {
     alert("Perdu");
   }
 }, 1);
