@@ -1,8 +1,8 @@
 let perso = document.querySelector(".perso");
 let obstacle = document.querySelector(".obstacle");
-const persoRect = document.querySelector(".perso").getBoundingClientRect();
-const obstacleRect = document.querySelector(".obstacle").getBoundingClientRect();
 
+// const persoRect = document.querySelector(".perso").getBoundingClientRect();
+// const obstacleRect = document.querySelector(".obstacle").getBoundingClientRect();
 
 // Essai des collisions
 // function updatePositions() {
@@ -19,7 +19,6 @@ const obstacleRect = document.querySelector(".obstacle").getBoundingClientRect()
 // }
 // updatePositions();
 
-
 // Rajoute un addEventListener sur les boutons mais ne marche pas donc j'ai fait un onclick dans le HTML
 
 // let boutonSaut = document.querySelector(".boutonSauter");
@@ -30,7 +29,11 @@ const obstacleRect = document.querySelector(".obstacle").getBoundingClientRect()
 
 // Fonction pour faire sauter le personnage
 function sauter() {
-  if (perso.classList != "sauter" && perso.classList != "seBaisser") {
+  if (
+    perso.classList != "sauter" &&
+    perso.classList != "seBaisser" &&
+    perso.classList != "kick"
+  ) {
     perso.classList.add("sauter");
 
     setTimeout(function () {
@@ -41,11 +44,29 @@ function sauter() {
 
 // Fonction pour faire baisser le personnage
 function seBaisser() {
-  if (perso.classList != "seBaisser" && perso.classList != "sauter") {
+  if (
+    perso.classList != "seBaisser" &&
+    perso.classList != "sauter" &&
+    perso.classList != "kick"
+  ) {
     perso.classList.add("seBaisser");
 
     setTimeout(function () {
       perso.classList.remove("seBaisser");
+    }, 700);
+  }
+}
+
+function kick() {
+  if (
+    perso.classList != "seBaisser" &&
+    perso.classList != "sauter" &&
+    perso.classList != "kick"
+  ) {
+    perso.classList.add("kick");
+
+    setTimeout(function () {
+      perso.classList.remove("kick");
     }, 700);
   }
 }
@@ -94,3 +115,11 @@ function obstacleBouge() {
 // }, 1000);
 
 // obstacleBouge();
+
+let collision = setInterval(function() {
+  gojoBottom = parseInt(window.getComputedStyle(perso).getPropertyValue("bottom"));
+  obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
+if (obstacleLeft < 141 && obstacleLeft > 100 && gojoBottom <= 50) {
+  alert(Perdu);
+}
+}, 1);

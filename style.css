@@ -19,7 +19,7 @@ body {
   background-image: url(./images/imageBackground.jpg);
   background-repeat: repeat-x;
   background-size: cover;
-  /* animation: defile 500s infinite linear; */
+  animation: defile 500s infinite linear;
 }
 
 /* Animation pour faire bouger l'image de fond */
@@ -69,6 +69,9 @@ body {
   animation: seBaisser 700ms;
 }
 
+.kick {
+  animation: kick 700ms;
+}
 /* .personnage {
   background: url(./images/gojoMove1.png);
   background-repeat: no-repeat;
