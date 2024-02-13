@@ -1,6 +1,24 @@
 let perso = document.querySelector(".perso");
 let obstacle = document.querySelector(".obstacle");
 
+// Mes fonctions sauter seBaisser et kick s'exécutent avec les flèches haut bas et droite
+document.addEventListener("keydown", function (event) {
+  if (event.code === "ArrowUp") {
+    sauter();
+  }
+});
+document.addEventListener("keydown", function (event) {
+  if (event.code === "ArrowDown") {
+    seBaisser();
+  }
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.code === "ArrowRight") {
+    kick();
+  }
+});
+
 // const persoRect = document.querySelector(".perso").getBoundingClientRect();
 // const obstacleRect = document.querySelector(".obstacle").getBoundingClientRect();
 
@@ -18,14 +36,6 @@ let obstacle = document.querySelector(".obstacle");
 //   setInterval(updatePositions, 10);
 // }
 // updatePositions();
-
-// Rajoute un addEventListener sur les boutons mais ne marche pas donc j'ai fait un onclick dans le HTML
-
-// let boutonSaut = document.querySelector(".boutonSauter");
-// let boutonSeBaisser = document.querySelector(".boutonSeBaisser");
-
-// boutonSaut.addEventListener("click", sauter());
-// boutonSeBaisser.addEventListener("click", seBaisser());
 
 // Fonction pour faire sauter le personnage
 function sauter() {
@@ -57,6 +67,7 @@ function seBaisser() {
   }
 }
 
+// Fonction pour que le personnage mette un coup
 function kick() {
   if (
     perso.classList != "seBaisser" &&
@@ -116,10 +127,16 @@ function obstacleBouge() {
 
 // obstacleBouge();
 
-let collision = setInterval(function() {
-  gojoBottom = parseInt(window.getComputedStyle(perso).getPropertyValue("bottom"));
-  obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
-if (obstacleLeft < 141 && obstacleLeft > 100 && gojoBottom <= 50) {
-  alert(Perdu);
-}
+let collision = setInterval(function () {
+  let gojoBottom = parseInt(
+    window.getComputedStyle(perso).getPropertyValue("bottom")
+  );
+  console.log(gojoBottom);
+  let obstacleLeft = parseInt(
+    window.getComputedStyle(obstacle).getPropertyValue("left")
+  );
+  console.log(obstacleLeft);
+  if (obstacleLeft <= 141 && obstacleLeft >= 50 && gojoBottom <= 145) {
+    alert("Perdu");
+  }
 }, 1);
