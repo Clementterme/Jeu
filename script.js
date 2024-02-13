@@ -1,5 +1,10 @@
 let perso = document.querySelector(".perso");
 let obstacle = document.querySelector(".obstacle");
+let obstacle2 = document.querySelector(".obstacle2");
+let obstacle3 = document.querySelector(".obstacle3");
+let obstacle4 = document.querySelector(".obstacle4");
+let obstacle5 = document.querySelector(".obstacle5");
+let obstacle6 = document.querySelector(".obstacle6");
 
 // Mes fonctions sauter seBaisser et kick s'exécutent avec les flèches haut bas et droite
 document.addEventListener("keydown", function (event) {
@@ -17,25 +22,7 @@ document.addEventListener("keydown", function (event) {
   if (event.code === "ArrowRight") {
     kick();
   }
-});
-
-// const persoRect = document.querySelector(".perso").getBoundingClientRect();
-// const obstacleRect = document.querySelector(".obstacle").getBoundingClientRect();
-
-// Essai des collisions
-// function updatePositions() {
-//   console.log(persoRect);
-//   console.log(obstacleRect);
-//   if (
-//     persoRect.right >= obstacleRect.left &&
-//     persoRect.bottom <= obstacleRect.top
-//   ) {
-//     alert(Perdu);
-//   }
-
-//   setInterval(updatePositions, 10);
-// }
-// updatePositions();
+}); 
 
 // Fonction pour faire sauter le personnage
 function sauter() {
@@ -48,7 +35,7 @@ function sauter() {
 
     setTimeout(function () {
       perso.classList.remove("sauter");
-    }, 700);
+    }, 800);
   }
 }
 
@@ -63,7 +50,7 @@ function seBaisser() {
 
     setTimeout(function () {
       perso.classList.remove("seBaisser");
-    }, 700);
+    }, 800);
   }
 }
 
@@ -113,30 +100,53 @@ function obstacleBouge() {
   setTimeout(obstacleBouge, 2100);
 }
 
-// setTimeout(function obstacleBouge2() {
-//   let obstacleAleatoire = getRandomObstacle2();
-//   let obstacleChoisi = document.querySelector(obstacleAleatoire);
-//   obstacleChoisi.classList.add("animationObstacle");
+setTimeout(function obstacleBouge2() {
+  let obstacleAleatoire = getRandomObstacle2();
+  let obstacleChoisi = document.querySelector(obstacleAleatoire);
+  obstacleChoisi.classList.add("animationObstacle");
 
-//   setTimeout(function () {
-//     obstacleChoisi.classList.remove("animationObstacle");
-//   }, 2000);
+  setTimeout(function () {
+    obstacleChoisi.classList.remove("animationObstacle");
+  }, 2000);
 
-//   setTimeout(obstacleBouge2, 2100);
-// }, 1000);
+  setTimeout(obstacleBouge2, 2100);
+}, 1000);
 
-// obstacleBouge();
+obstacleBouge();
 
 let collision = setInterval(function () {
-  let gojoBottom = parseInt(
-    window.getComputedStyle(perso).getPropertyValue("bottom")
-  );
-  console.log(gojoBottom);
-  let obstacleLeft = parseInt(
-    window.getComputedStyle(obstacle).getPropertyValue("left")
-  );
-  console.log(obstacleLeft);
+  let gojoBottom = parseInt(window.getComputedStyle(perso).getPropertyValue("bottom"));
+  let gojoTop = parseInt(window.getComputedStyle(perso).getPropertyValue("top"));
+  let gojoWidth = parseInt(window.getComputedStyle(perso).getPropertyValue("width"));
+  let obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
+  let obstacleLeft2 = parseInt(window.getComputedStyle(obstacle2).getPropertyValue("left"));
+  let obstacleLeft3 = parseInt(window.getComputedStyle(obstacle3).getPropertyValue("left"));
+  let obstacleLeft4 = parseInt(window.getComputedStyle(obstacle4).getPropertyValue("left"));
+  let obstacleLeft5 = parseInt(window.getComputedStyle(obstacle5).getPropertyValue("left"));
+  let obstacleLeft6 = parseInt(window.getComputedStyle(obstacle6).getPropertyValue("left"));
+
   if (obstacleLeft <= 141 && obstacleLeft >= 50 && gojoBottom <= 145) {
+    alert("Perdu");
+  }
+  if (obstacleLeft4 <= 141 && obstacleLeft4 >= 50 && gojoBottom <= 145) {
+    alert("Perdu");
+  }
+  if (obstacleLeft2 <= 141 && obstacleLeft2 >= 50 && gojoTop <= 230) {
+    alert("Perdu");
+  }
+  if (obstacleLeft5 <= 141 && obstacleLeft5 >= 50 && gojoTop <= 230) {
+    alert("Perdu");
+  }
+  if (obstacleLeft3 <= 141 && obstacleLeft3 >= 50 && gojoWidth >= 54) {
+    obstacle3.classList.remove("animationObstacle");
+  }
+  if (obstacleLeft3 <= 141 && obstacleLeft3 >= 50 && gojoWidth < 54) {
+    alert("Perdu");
+  }
+  if (obstacleLeft6 <= 141 && obstacleLeft6 >= 50 && gojoWidth >= 54) {
+    obstacle6.classList.remove("animationObstacle");
+  }
+  if (obstacleLeft6 <= 141 && obstacleLeft6 >= 50 && gojoWidth < 54) {
     alert("Perdu");
   }
 }, 1);
