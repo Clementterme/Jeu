@@ -104,41 +104,49 @@ body {
 .obstacle {
   width: 50px;
   height: 50px;
-  background-color: red;
   position: absolute;
   bottom: 95px;
   left: 650px;
   visibility: hidden;
+  background-image: url(./images/sonic.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .obstacle4 {
   width: 50px;
   height: 50px;
-  background-color: red;
   position: absolute;
   bottom: 95px;
   left: 650px;
   visibility: hidden;
+  background-image: url(./images/pacman.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .obstacle2 {
   width: 50px;
   height: 50px;
-  background-color: greenyellow;
   position: absolute;
   bottom: 170px;
   left: 650px;
   visibility: hidden;
+  background-image: url(./images/canon.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .obstacle5 {
-  width: 50px;
+  width: 85px;
   height: 50px;
-  background-color: greenyellow;
   position: absolute;
   bottom: 170px;
   left: 650px;
   visibility: hidden;
+  background-image: url(./images/bouleDeFeu.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .obstacle3 {
@@ -148,13 +156,15 @@ body {
   bottom: 95px;
   left: 650px;
   visibility: hidden;
-  background-image: url(./images/aowMove1.png);
+  background-image: url(./images/og-age-of-war.png);
   background-repeat: no-repeat;
   background-size: cover;
-  animation: obstacle3 1s infinite;
+  /* animation: obstacle3 1s infinite; */
 }
 
-@keyframes obstacle3 {
+
+/* Test animation obstacle mais ne fonctionne pas */
+/* @keyframes obstacle3 {
   0% {
     background-image: url(./images/aowMove1.png);
   }
@@ -178,16 +188,18 @@ body {
     background-image: url(./images/aowMove2.png);
     width: 67px;
   }
-}
+} */
 
 .obstacle6 {
-  width: 50px;
+  width: 55px;
   height: 100px;
-  background-color: blueviolet;
   position: absolute;
   bottom: 95px;
   left: 650px;
   visibility: hidden;
+  background-image: url(./images/titanBestial.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Animation de déplacement d'un obstacle */
