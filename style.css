@@ -12,6 +12,7 @@ body {
 
 .jeu {
   margin: auto;
+  margin-top: 50px;
   border: solid 3px rgb(52, 18, 125);
   border-radius: 10px;
   width: 700px;
